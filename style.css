@@ -1,0 +1,773 @@
+:root {
+  --bg-color: #f8f4e8;
+  --stroke: #023d27;
+  --bg-car: #d5dbbd;
+  --shadow-car: #8d695b;
+  --skin-color: #afcc73;
+  --skin-shadow: #89b661;
+  --skin-detail: #88b960;
+  --pink-ear: #f49080;
+  --pink-cheek: #fcaca1;
+  --pink-shadow: #dc6658;
+  --cloak-color: #d89c82;
+  --cloak-shadow: #bf826d;
+  --eye-sparkle: #fefefe;
+
+  --size: 80;
+  --unit: calc((var(--size) / 472) * 1vmin)
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  position: absolute;
+  background-color: var(--bg-color);
+  height: calc(550 * var(--unit));
+  width: calc(600 * var(--unit));
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animation {
+  position: absolute;
+  height: calc(350 * var(--unit));
+  width: calc(350 * var(--unit));
+  border-radius: 50%;
+  left: 21%;
+  top: 18%;
+  transform: translate(-50%, -50%);
+  animation: float 1.2s ease-in-out infinite;
+}
+
+.car {
+  position: absolute;
+  background-color: var(--bg-car);
+  height: calc(350 * var(--unit));
+  width: calc(350 * var(--unit));
+  border-radius: 50%;
+  border: calc(12 * var(--unit)) solid var(--stroke);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.car::before {
+  content: '';
+  position: absolute;
+  background-color: var(--shadow-car);
+  height: 92.5%;
+  width: 92.5%;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.car::after {
+  content: '';
+  position: absolute;
+  background-color: var(--bg-car);
+  height: 32%;
+  width: 76%;
+  left: 50%;
+  top: 82%;
+  transform: translate(-50%, -50%);
+  border-radius: 0 0 124px 124px;
+  box-shadow: inset calc(var(--unit) * -22) calc(var(--unit) * 5) 0 calc(var(--unit) * 3) var(--shadow-car);
+}
+
+.car-panel {
+  position: absolute;
+  background-color: var(--bg-car);
+  height: calc(57 * var(--unit));
+  width: calc(360 * var(--unit));
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  border: calc(12 * var(--unit)) solid var(--stroke);
+  z-index: 10;
+  box-shadow: inset calc(var(--unit) * 15) 0 0 calc(var(--unit) * -1) var(--shadow-car), inset calc(var(--unit) * -15) 0 0 calc(var(--unit) * -1) var(--shadow-car);
+}
+
+.panel-detail1 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 66%;
+  width: 3.5%;
+  left: -3.5%;
+  top: -100%;
+}
+
+.panel-detail2 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 66%;
+  width: 3.5%;
+  left: 100%;
+  top: -100%;
+}
+
+.panel-dot {
+  position: absolute;
+  background-color: var(--shadow-car);
+  height: 46%;
+  width: 8%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 40%;
+}
+
+.panel-dot1 {
+  position: absolute;
+  background-color: var(--shadow-car);
+  height: 46%;
+  width: 8%;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 40%;
+}
+
+.panel-dot2 {
+  position: absolute;
+  background-color: var(--shadow-car);
+  height: 46%;
+  width: 8%;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 40%;
+}
+
+.below-shadow-panel {
+  position: absolute;
+  background-color: var(--shadow-car);
+  height: 4%;
+  width: 68%;
+  left: 46%;
+  top: 84.4%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.circle1 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 14%;
+  width: 14%;
+  border-radius: 50%;
+  left: -10%;
+  top: 62%;
+}
+
+.circle2 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 14%;
+  width: 14%;
+  border-radius: 50%;
+  left: 96.5%;
+  top: 62%;
+}
+
+.head {
+  position: absolute;
+  background-color: var(--skin-color);
+  height: 40%;
+  width: 52%;
+  border-radius: 66% 66% 44% 44% / 78% 78% 46% 46%;
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  left: 50%;
+  top: 37%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 calc(var(--unit) * -6) 0 calc(var(--unit) * 4) var(--skin-shadow), 0 calc(var(--unit) * 11) 0 calc(var(--unit) * -6) var(--cloak-shadow);
+}
+
+.eye-r {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 28%;
+  width: 28%;
+  left: 77%;
+  top: 67%;
+  transform: translate(-50%, -50%);
+  border-radius: 72% 42% 72% 42%;
+}
+
+.eye-l {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 28%;
+  width: 28%;
+  left: 24%;
+  top: 67%;
+  transform: translate(-50%, -50%);
+  border-radius: 42% 72% 42% 72%;
+}
+
+.sparkle1 {
+  position: absolute;
+  background-color: var(--eye-sparkle);
+  height: 48%;
+  width: 26%;
+  left: 45%;
+  top: 43%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+.sparkle2 {
+  position: absolute;
+  background-color: var(--eye-sparkle);
+  height: 16%;
+  width: 18%;
+  left: 69%;
+  top: 66%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-40deg);
+}
+
+.sparkle3 {
+  position: absolute;
+  background-color: var(--eye-sparkle);
+  height: 48%;
+  width: 26%;
+  left: 52%;
+  top: 43%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.sparkle4 {
+  position: absolute;
+  background-color: var(--eye-sparkle);
+  height: 16%;
+  width: 18%;
+  left: 30%;
+  top: 66%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(40deg);
+}
+
+.nose-r {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 5%;
+  width: 5%;
+  left: 54%;
+  top: 75%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+.nose-l {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 5%;
+  width: 5%;
+  left: 47%;
+  top: 75%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.nose-shadow {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 11%;
+  width: 13%;
+  left: 50.5%;
+  top: 73%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mouth {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 13%;
+  width: 12%;
+  left: 56.5%;
+  top: 86%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(270deg);
+  clip-path: circle(116% at -56% 122%);
+}
+
+.cheek-r {
+  position: absolute;
+  background-color: var(--pink-cheek);
+  height: 12%;
+  width: 14%;
+  left: 86%;
+  top: 77%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+.cheek-l {
+  position: absolute;
+  background-color: var(--pink-cheek);
+  height: 12%;
+  width: 14%;
+  left: 14%;
+  top: 77%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.eyebrow1 {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 6%;
+  width: 12%;
+  left: 80%;
+  top: 41%;
+  border-radius: 85% 38% 80% 0%;
+  transform: translate(-50%, -50%) rotate(20deg);
+}
+
+.eyebrow2 {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 6%;
+  width: 12%;
+  left: 23%;
+  top: 41%;
+  border-radius: 38% 85% 0% 80%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+.head-detail1 {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 8%;
+  width: 10%;
+  left: 50%;
+  top: 25%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.head-detail2 {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 8%;
+  width: 10%;
+  left: 62%;
+  top: 23.5%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-14deg);
+}
+
+.head-detail3 {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 8%;
+  width: 10%;
+  left: 37.5%;
+  top: 23.5%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(14deg);
+}
+
+.head-detail4 {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 8%;
+  width: 10%;
+  left: 44.5%;
+  top: 14%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(14deg);
+}
+
+.head-detail5 {
+  position: absolute;
+  background-color: var(--skin-shadow);
+  height: 8%;
+  width: 10%;
+  left: 56%;
+  top: 14%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-14deg);
+}
+
+.hair1 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 5%;
+  width: 3%;
+  left: 54%;
+  top: 18%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.hair2 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 5%;
+  width: 3%;
+  left: 47%;
+  top: 18%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.hair3 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 5%;
+  width: 3%;
+  left: 36%;
+  top: 21.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.hair4 {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 5%;
+  width: 3%;
+  left: 65%;
+  top: 22%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.ear-r {
+  position: absolute;
+  background-color: var(--skin-color);
+  height: 24%;
+  width: 44%;
+  left: 85%;
+  top: 34%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  border-radius: 87% 13% 99% 1% / 6% 8% 92% 94%;
+  box-shadow: inset calc(var(--unit) * -10) calc(var(--unit) * -46) 0 calc(var(--unit) * -7) var(--skin-shadow);
+}
+
+.smaller-ear-r {
+  position: absolute;
+  background-color: var(--skin-color);
+  height: 70%;
+  width: 100%;
+  left: 48%;
+  top: 61%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  border-bottom: none;
+  border-radius: 87% 13% 99% 1% / 6% 8% 92% 94%;
+}
+
+.ear-detail-r {
+  position: absolute;
+  background-color: var(--pink-ear);
+  height: 64%;
+  width: 64%;
+  left: 42%;
+  top: 30%;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  border-radius: 0 9% 190% 50%;
+  box-shadow: inset 0 calc(var(--unit) * 10) 0 rgba(0, 0, 0, 0.2);
+}
+
+.ear-l {
+  position: absolute;
+  background-color: var(--skin-color);
+  height: 24%;
+  width: 44%;
+  left: 14%;
+  top: 34%;
+  transform: translate(-50%, -50%) rotate(5deg) scaleX(-1);
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  border-radius: 87% 13% 99% 1% / 6% 8% 92% 94%;
+  box-shadow: inset calc(var(--unit) * -10) calc(var(--unit) * -46) 0 calc(var(--unit) * -7) var(--skin-shadow);
+}
+
+.smaller-ear-l {
+  position: absolute;
+  background-color: var(--skin-color);
+  height: 70%;
+  width: 100%;
+  left: 48%;
+  top: 61%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  border-bottom: none;
+  border-radius: 87% 13% 99% 1% / 6% 8% 92% 94%;
+}
+
+.ear-detail-l {
+  position: absolute;
+  background-color: var(--pink-ear);
+  height: 64%;
+  width: 64%;
+  left: 42%;
+  top: 30%;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  border-radius: 0 9% 190% 50%;
+  box-shadow: inset 0 calc(var(--unit) * 10) 0 rgba(0, 0, 0, 0.2);
+}
+
+.cloak {
+  position: absolute;
+  background-color: var(--cloak-color);
+  height: 50%;
+  width: 62%;
+  left: 50%;
+  top: 61%;
+  transform: translate(-50%, -50%);
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  border-radius: 50% 50% 0 0;
+  box-shadow: inset calc(var(--unit) * -9) calc(var(--unit) * 36) 0 calc(var(--unit) * 4) var(--cloak-shadow);
+}
+
+.cloak-detail {
+  position: absolute;
+  background-color: var(--stroke);
+  height: 50%;
+  width: 5%;
+  left: 48%;
+  top: 61%;
+  transform: translate(-50%, -50%) rotate(22deg);
+}
+
+.sleeve-r {
+  position: absolute;
+  background-color: var(--cloak-color);
+  height: 24%;
+  width: 23%;
+  left: 80%;
+  top: 68%;
+  transform: translate(-50%, -50%);
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  border-radius: 50%;
+}
+
+.sleeve-l {
+  position: absolute;
+  background-color: var(--cloak-color);
+  height: 24%;
+  width: 23%;
+  left: 20%;
+  top: 68%;
+  transform: translate(-50%, -50%);
+  border: calc(10 * var(--unit)) solid var(--stroke);
+  border-radius: 50%;
+}
+
+.hand-r {
+  position: absolute;
+  background-color: var(--skin-color);
+  z-index: 20;
+  height: 10%;
+  width: 13%;
+  left: 80%;
+  top: 66.5%;
+  transform: translate(-50%, -50%);
+  border: calc(5 * var(--unit)) solid var(--stroke);
+  border-radius: 50%;
+}
+
+.hand-l {
+  position: absolute;
+  background-color: var(--skin-color);
+  z-index: 20;
+  height: 10%;
+  width: 13%;
+  left: 20%;
+  top: 66.5%;
+  transform: translate(-50%, -50%);
+  border: calc(5 * var(--unit)) solid var(--stroke);
+  border-radius: 50%;
+}
+
+.sparkles > div {
+  position: absolute;
+  height: calc(30 * var(--unit));
+  width: calc(30 * var(--unit));
+}
+
+.sparkles > div::before,
+.sparkles > div::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: var(--stroke);
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7%;
+}
+
+.sparkles > div::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sparkles .pink::before,
+.sparkles .pink::after {
+  background-color: var(--pink-shadow);
+}
+
+.sparkles .brown::before,
+.sparkles .brown::after {
+  background-color: var(--shadow-car);
+}
+
+.sparkles .small {
+  transform: scale(0.4);
+}
+
+.sparkles .med {
+  transform: scale(0.6);
+}
+
+.sparkles .one {
+  top: 50%;
+  left: -17%;
+}
+
+.sparkles .two {
+  top: 37%;
+  left: -12%;
+}
+
+.sparkles .three {
+  top: -11%;
+  left: 39%;
+}
+
+.sparkles .four {
+  top: 9%;
+  left: 2%;
+}
+
+.sparkles .five {
+  top: 22%;
+  left: 106%;
+}
+
+.sparkles .six {
+  top: -6%;
+  left: 12%;
+}
+
+.sparkles .seven {
+  top: 81%;
+  left: -9%;
+}
+
+.sparkles .eight {
+  top: -22%;
+  left: 50%;
+}
+
+.sparkles .nine {
+  top: -16%;
+  left: 28%;
+}
+
+.sparkles .ten {
+  top: -7%;
+  left: 77%;
+}
+
+.sparkles .eleven {
+  top: -2%;
+  left: 88%;
+}
+
+.sparkles .twelve {
+  top: 12%;
+  left: 96%;
+}
+
+.sparkles .thirteen {
+  top: 39%;
+  left: 105%;
+}
+
+.sparkles .fourteen {
+  top: 66%;
+  left: 109%;
+}
+
+.sparkles .fifteen {
+  top: 48%;
+  left: 101%;
+}
+
+.sparkles .sixteen {
+  top: 0%;
+  left: 102%;
+}
+
+.sparkles .pulse {
+  animation: pulse 0.8s linear infinite;
+}
+
+.sparkles .pulse1 {
+  animation: pulse 0.8s 300ms linear infinite;
+}
+
+.sparkles .pulse2 {
+  animation: pulse 0.8s 600ms linear infinite;
+}
+
+.sparkles .pulse3 {
+  animation: pulse 0.8s 900ms linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0.7);
+  }
+}
+
+.shadow-all {
+  position: absolute;
+  background-color: #aeacaf;
+  height: calc(32 * var(--unit));
+  width: calc(310 * var(--unit));
+  left: 50%;
+  top: 89%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
