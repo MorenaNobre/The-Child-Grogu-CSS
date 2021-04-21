@@ -28,7 +28,7 @@
 
 <br>
 <div align="center">
-  <img alt="glass-business-card" src="the-child.gif" width="100%">
+  <img alt="the-child" src="baby-yoda.gif" width="100%">
 </div>
 <br>
 
